@@ -157,7 +157,6 @@ def searchstudent():
                 by = by.lower()
                 mycursor.execute("select *from student where "+by+" LIKE '%"+txt+"%'")
                 rows = mycursor.fetchall()
-                print(rows)
                 if len(rows)!=0:
                     studenttable.delete(*studenttable.get_children())
                     for row in rows:
